@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\can.acar\.Rider2019.2\config\javascript\nodejs\12.4.0\core-modules" t="IncludeRecursive" />
-    <e p="C:\Users\can.acar\.Rider2019.2\config\javascript\nodejs\12.4.0\node-typings\node_modules\@types" t="IncludeRecursive" />
-    <e p="C:\Users\can.acar\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\can.acar\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_NetCoreReactServerRender.-879478571.00" t="ExcludeRecursive" />
-    <e p="E:\Projects\NetCoreReactServerRender" t="IncludeFlat">
+    <e p="C:\Users\Eclips\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Eclips\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_NetCoreReactServerRender.2111094996.00" t="ExcludeRecursive" />
+    <e p="D:\Projects\NetCoreReactServerRender" t="IncludeFlat">
       <e p="NetCoreReactServerRender" t="IncludeRecursive">
         <e p=".babelrc" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
@@ -19,24 +17,40 @@
             <e p="main-server.js" t="Include" />
           </e>
           <e p="src" t="Include">
-            <e p="app.js" t="Include" />
+            <e p="index.jsx" t="Include" />
           </e>
-        </e>
-        <e p="Models" t="Include">
-          <e p="ErrorViewModel.cs" t="Include" />
         </e>
         <e p="NetCoreReactServerRender.csproj" t="IncludeRecursive" />
         <e p="node_modules\@babel\core" t="IncludeRecursive" />
+        <e p="node_modules\@babel\plugin-proposal-class-properties" t="IncludeRecursive" />
+        <e p="node_modules\@babel\plugin-proposal-decorators" t="IncludeRecursive" />
+        <e p="node_modules\@babel\plugin-proposal-optional-catch-binding" t="IncludeRecursive" />
+        <e p="node_modules\@babel\plugin-transform-runtime" t="IncludeRecursive" />
+        <e p="node_modules\@babel\polyfill" t="IncludeRecursive" />
         <e p="node_modules\@babel\preset-env" t="IncludeRecursive" />
         <e p="node_modules\@babel\preset-react" t="IncludeRecursive" />
+        <e p="node_modules\@hot-loader\react-dom" t="IncludeRecursive" />
+        <e p="node_modules\@types" t="IncludeRecursive" />
         <e p="node_modules\aspnet-prerendering" t="IncludeRecursive" />
         <e p="node_modules\aspnet-webpack" t="IncludeRecursive" />
+        <e p="node_modules\aspnet-webpack-react" t="IncludeRecursive" />
         <e p="node_modules\babel-loader" t="IncludeRecursive" />
+        <e p="node_modules\case-sensitive-paths-webpack-plugin" t="IncludeRecursive" />
         <e p="node_modules\connected-react-router" t="IncludeRecursive" />
         <e p="node_modules\css-loader" t="IncludeRecursive" />
+        <e p="node_modules\cssnano" t="IncludeRecursive" />
+        <e p="node_modules\event-source-polyfill" t="IncludeRecursive" />
+        <e p="node_modules\file-loader" t="IncludeRecursive" />
         <e p="node_modules\history" t="IncludeRecursive" />
+        <e p="node_modules\ignore-loader" t="IncludeRecursive" />
         <e p="node_modules\immutable" t="IncludeRecursive" />
+        <e p="node_modules\json-to-url" t="IncludeRecursive" />
+        <e p="node_modules\mini-css-extract-plugin" t="IncludeRecursive" />
+        <e p="node_modules\node-noop" t="IncludeRecursive" />
+        <e p="node_modules\node-sass" t="IncludeRecursive" />
+        <e p="node_modules\optimize-css-assets-webpack-plugin" t="IncludeRecursive" />
         <e p="node_modules\react" t="IncludeRecursive" />
+        <e p="node_modules\react-dev-utils" t="IncludeRecursive" />
         <e p="node_modules\react-dom" t="IncludeRecursive" />
         <e p="node_modules\react-helmet" t="IncludeRecursive" />
         <e p="node_modules\react-hot-loader" t="IncludeRecursive" />
@@ -44,9 +58,15 @@
         <e p="node_modules\react-router" t="IncludeRecursive" />
         <e p="node_modules\react-router-dom" t="IncludeRecursive" />
         <e p="node_modules\redux" t="IncludeRecursive" />
+        <e p="node_modules\rimraf" t="IncludeRecursive" />
+        <e p="node_modules\rxjs" t="IncludeRecursive" />
+        <e p="node_modules\sass-loader" t="IncludeRecursive" />
         <e p="node_modules\source-map" t="IncludeRecursive" />
         <e p="node_modules\style-loader" t="IncludeRecursive" />
         <e p="node_modules\symbol-observable" t="IncludeRecursive" />
+        <e p="node_modules\terser-webpack-plugin" t="IncludeRecursive" />
+        <e p="node_modules\tslib" t="IncludeRecursive" />
+        <e p="node_modules\url-loader" t="IncludeRecursive" />
         <e p="node_modules\webpack" t="IncludeRecursive" />
         <e p="node_modules\webpack-cli" t="IncludeRecursive" />
         <e p="node_modules\webpack-dev-middleware" t="IncludeRecursive" />
@@ -59,7 +79,6 @@
             </e>
           </e>
         </e>
-        <e p="package-lock.json" t="Include" />
         <e p="package.json" t="Include" />
         <e p="Pages" t="Include">
           <e p="Index.cshtml" t="Include" />
@@ -75,6 +94,8 @@
             <e p="site.css" t="Include" />
           </e>
           <e p="dist" t="Include">
+            <e p="bundle.js" t="Include" />
+            <e p="bundle.js.map" t="Include" />
             <e p="main-client.js" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
@@ -135,6 +156,7 @@
             </e>
           </e>
         </e>
+        <e p="yarn.lock" t="Include" />
       </e>
       <e p="NetCoreReactServerRender.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
