@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58143885-e104-4cad-8115-f80fa2ed105e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NetCoreReactServerRender/.idea/dictionaries/Eclips.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NetCoreReactServerRender/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetCoreReactServerRender/wwwroot/dist/bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetCoreReactServerRender/wwwroot/dist/bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetCoreReactServerRender/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NetCoreReactServerRender/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetCoreReactServerRender/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NetCoreReactServerRender/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetCoreReactServerRender/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NetCoreReactServerRender/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetCoreReactServerRender/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/boot-client.js" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/boot-client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/boot-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/boot-server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/dist/main-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/dist/main-server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/src/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Controllers/HomeController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Models/ErrorViewModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/NetCoreReactServerRender.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/NetCoreReactServerRender.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Views/Home/Index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Views/Home/Privacy.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Views/Shared/Error.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Views/Shared/_CookieConsentPartial.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Views/Shared/_Layout.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Views/Shared/_ValidationScriptsPartial.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Views/_ViewImports.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/Views/_ViewStart.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/wwwroot/dist/main-client.js" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/wwwroot/dist/main-client.js" afterDir="false" />
-    </list>
+    <list default="true" id="58143885-e104-4cad-8115-f80fa2ed105e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +131,7 @@
       <updated>1568380310123</updated>
       <workItem from="1568380311820" duration="1567000" />
       <workItem from="1568381965004" duration="738000" />
-      <workItem from="1568390029519" duration="5773000" />
+      <workItem from="1568390029519" duration="6127000" />
     </task>
     <servers />
   </component>
