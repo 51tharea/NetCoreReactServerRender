@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\can.acar\.Rider2019.2\config\javascript\nodejs\12.4.0\core-modules" t="IncludeRecursive" />
+    <e p="C:\Users\can.acar\.Rider2019.2\config\javascript\nodejs\12.4.0\node-typings\node_modules\@types" t="IncludeRecursive" />
+    <e p="C:\Users\can.acar\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\can.acar\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_NetCoreReactServerRender.-879478571.00" t="ExcludeRecursive" />
+    <e p="E:\Projects\NetCoreReactServerRender" t="IncludeFlat">
+      <e p="NetCoreReactServerRender" t="IncludeRecursive">
+        <e p=".babelrc" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ClientApp" t="Include">
+          <e p="boot-client.js" t="Include" />
+          <e p="boot-server.js" t="Include" />
+          <e p="configureStore.js" t="Include" />
+          <e p="dist" t="Include">
+            <e p="main-server.js" t="Include" />
+          </e>
+          <e p="src" t="Include">
+            <e p="app.js" t="Include" />
+          </e>
+        </e>
+        <e p="Models" t="Include">
+          <e p="ErrorViewModel.cs" t="Include" />
+        </e>
+        <e p="NetCoreReactServerRender.csproj" t="IncludeRecursive" />
+        <e p="node_modules\@babel\core" t="IncludeRecursive" />
+        <e p="node_modules\@babel\preset-env" t="IncludeRecursive" />
+        <e p="node_modules\@babel\preset-react" t="IncludeRecursive" />
+        <e p="node_modules\aspnet-prerendering" t="IncludeRecursive" />
+        <e p="node_modules\aspnet-webpack" t="IncludeRecursive" />
+        <e p="node_modules\babel-loader" t="IncludeRecursive" />
+        <e p="node_modules\connected-react-router" t="IncludeRecursive" />
+        <e p="node_modules\css-loader" t="IncludeRecursive" />
+        <e p="node_modules\history" t="IncludeRecursive" />
+        <e p="node_modules\immutable" t="IncludeRecursive" />
+        <e p="node_modules\react" t="IncludeRecursive" />
+        <e p="node_modules\react-dom" t="IncludeRecursive" />
+        <e p="node_modules\react-helmet" t="IncludeRecursive" />
+        <e p="node_modules\react-hot-loader" t="IncludeRecursive" />
+        <e p="node_modules\react-redux" t="IncludeRecursive" />
+        <e p="node_modules\react-router" t="IncludeRecursive" />
+        <e p="node_modules\react-router-dom" t="IncludeRecursive" />
+        <e p="node_modules\redux" t="IncludeRecursive" />
+        <e p="node_modules\source-map" t="IncludeRecursive" />
+        <e p="node_modules\style-loader" t="IncludeRecursive" />
+        <e p="node_modules\symbol-observable" t="IncludeRecursive" />
+        <e p="node_modules\webpack" t="IncludeRecursive" />
+        <e p="node_modules\webpack-cli" t="IncludeRecursive" />
+        <e p="node_modules\webpack-dev-middleware" t="IncludeRecursive" />
+        <e p="node_modules\webpack-hot-middleware" t="IncludeRecursive" />
+        <e p="node_modules\webpack-merge" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="NetCoreReactServerRender.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="package-lock.json" t="Include" />
+        <e p="package.json" t="Include" />
+        <e p="Pages" t="Include">
+          <e p="Index.cshtml" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="webpack.config.js" t="Include" />
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="site.css" t="Include" />
+          </e>
+          <e p="dist" t="Include">
+            <e p="main-client.js" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="js" t="Include">
+            <e p="site.js" t="Include" />
+          </e>
+          <e p="lib" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p="dist" t="Include">
+                <e p="css" t="Include">
+                  <e p="bootstrap-grid.css" t="Include" />
+                  <e p="bootstrap-grid.css.map" t="Include" />
+                  <e p="bootstrap-grid.min.css" t="Include" />
+                  <e p="bootstrap-grid.min.css.map" t="Include" />
+                  <e p="bootstrap-reboot.css" t="Include" />
+                  <e p="bootstrap-reboot.css.map" t="Include" />
+                  <e p="bootstrap-reboot.min.css" t="Include" />
+                  <e p="bootstrap-reboot.min.css.map" t="Include" />
+                  <e p="bootstrap.css" t="Include" />
+                  <e p="bootstrap.css.map" t="Include" />
+                  <e p="bootstrap.min.css" t="Include" />
+                  <e p="bootstrap.min.css.map" t="Include" />
+                </e>
+                <e p="js" t="Include">
+                  <e p="bootstrap.bundle.js" t="Include" />
+                  <e p="bootstrap.bundle.js.map" t="Include" />
+                  <e p="bootstrap.bundle.min.js" t="Include" />
+                  <e p="bootstrap.bundle.min.js.map" t="Include" />
+                  <e p="bootstrap.js" t="Include" />
+                  <e p="bootstrap.js.map" t="Include" />
+                  <e p="bootstrap.min.js" t="Include" />
+                  <e p="bootstrap.min.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="LICENSE" t="Include" />
+            </e>
+            <e p="jquery" t="Include">
+              <e p="dist" t="Include">
+                <e p="jquery.js" t="Include" />
+                <e p="jquery.min.js" t="Include" />
+                <e p="jquery.min.map" t="Include" />
+              </e>
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+            <e p="jquery-validation" t="Include">
+              <e p="dist" t="Include">
+                <e p="additional-methods.js" t="Include" />
+                <e p="additional-methods.min.js" t="Include" />
+                <e p="jquery.validate.js" t="Include" />
+                <e p="jquery.validate.min.js" t="Include" />
+              </e>
+              <e p="LICENSE.md" t="Include" />
+            </e>
+            <e p="jquery-validation-unobtrusive" t="Include">
+              <e p="jquery.validate.unobtrusive.js" t="Include" />
+              <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="NetCoreReactServerRender.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
