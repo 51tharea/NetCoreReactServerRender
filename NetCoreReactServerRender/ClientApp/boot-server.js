@@ -44,8 +44,7 @@ export default createServerRenderer(params => {
                 <StaticRouter
                     basename={basename}
                     context={routerContext}
-                    location={params.location.path}
-                >
+                    location={params.location.path}>
                     <App/>
                 </StaticRouter>
             </Provider>
