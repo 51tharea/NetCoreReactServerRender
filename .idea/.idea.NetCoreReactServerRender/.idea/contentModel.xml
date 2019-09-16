@@ -35,6 +35,8 @@
         <e p="node_modules\aspnet-webpack" t="IncludeRecursive" />
         <e p="node_modules\aspnet-webpack-react" t="IncludeRecursive" />
         <e p="node_modules\babel-loader" t="IncludeRecursive" />
+        <e p="node_modules\babel-plugin-syntax-dynamic-import" t="IncludeRecursive" />
+        <e p="node_modules\babel-plugin-transform-class-properties" t="IncludeRecursive" />
         <e p="node_modules\case-sensitive-paths-webpack-plugin" t="IncludeRecursive" />
         <e p="node_modules\connected-react-router" t="IncludeRecursive" />
         <e p="node_modules\css-loader" t="IncludeRecursive" />

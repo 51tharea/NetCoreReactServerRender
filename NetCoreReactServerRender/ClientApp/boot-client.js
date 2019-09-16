@@ -11,7 +11,7 @@ import {Application} from "./src";
 const history = createBrowserHistory();
 
 // Get the application-wide store instance, prepopulating with state from the server where available.
-const initialState = window.initialReduxState;
+const initialState = window.initialState;
 
 // Configure store with initial state that comes from server-side rendered html and newly created history
 const store = configureStore(history, initialState);
