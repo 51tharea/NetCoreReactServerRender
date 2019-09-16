@@ -7,6 +7,10 @@ const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeM
 const CssNanoPlugin = require("cssnano");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
+
+
+
 module.exports = env => {
     const isDevBuild = !(env && env.prod);
 
@@ -15,7 +19,25 @@ module.exports = env => {
         mode: isDevBuild ? "development" : "production",
         optimization: {
             minimize: !isDevBuild,
-            usedExports: isDevBuild
+            usedExports: isDevBuild,
+            minimizer: !isDevBuild ? [
+                // Production.
+                new TerserWebpackPlugin({
+                    terserOptions: {
+                        output: {
+                            comments: false,
+                        },
+                    },
+                }),
+                new OptimizeCSSAssetsPlugin({
+                    cssProcessor: CssNanoPlugin,
+                    cssProcessorPluginOptions: {
+                        preset: ["default", {discardComments: {removeAll: true}}]
+                    }
+                })
+            ] : [
+                // Development.
+            ]
         },
         stats: {modules: false},
         resolve: {
@@ -23,7 +45,7 @@ module.exports = env => {
         },
         output: {
             filename: "[name].js",
-            publicPath: "/dist/" // Webpack dev middleware, if enabled, handles requests for this URL prefix.
+            publicPath: "dist/" // Webpack dev middleware, if enabled, handles requests for this URL prefix.
         },
         module: {
             rules: [
@@ -81,11 +103,19 @@ module.exports = env => {
         // Change config for development build.
         sharedConfig = {
             ...sharedConfig,
+            performance: {
+                hints: false,
+            },
             devtool: isDevBuild
                 ? '#eval-source-map'
                 : 'source-map',
 
         };
+        sharedConfig.resolve.alias = {
+            ...sharedConfig.resolve.alias,
+            'react-dom': '@hot-loader/react-dom'
+        }
+
     }
 
     // Configuration for client-side bundle suitable for running in browsers.

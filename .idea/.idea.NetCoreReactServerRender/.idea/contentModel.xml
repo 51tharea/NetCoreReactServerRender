@@ -19,6 +19,12 @@
           <e p="src" t="Include">
             <e p="index.jsx" t="Include" />
           </e>
+          <e p="styles" t="Include">
+            <e p="index.css" t="Include" />
+          </e>
+        </e>
+        <e p="Models" t="Include">
+          <e p="NodeSession.cs" t="Include" />
         </e>
         <e p="NetCoreReactServerRender.csproj" t="IncludeRecursive" />
         <e p="node_modules\@babel\core" t="IncludeRecursive" />
@@ -85,6 +91,7 @@
         <e p="package.json" t="Include" />
         <e p="Pages" t="Include">
           <e p="Index.cshtml" t="Include" />
+          <e p="Index.cshtml.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
@@ -93,13 +100,9 @@
         <e p="Startup.cs" t="Include" />
         <e p="webpack.config.js" t="Include" />
         <e p="wwwroot" t="Include">
-          <e p="css" t="Include">
-            <e p="site.css" t="Include" />
-          </e>
           <e p="dist" t="Include">
             <e p="bundle.js" t="Include" />
             <e p="bundle.js.map" t="Include" />
-            <e p="main-client.js" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
         </e>

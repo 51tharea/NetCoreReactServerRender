@@ -1,13 +1,18 @@
 @page
+@model NetCoreReactServerRender.Pages.Index
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @inject Microsoft.AspNetCore.SpaServices.Prerendering.ISpaPrerenderer prerenderer
 
 @{
     Layout = null;
 
-    var prerenderResult = await prerenderer.RenderToString("ClientApp/dist/main-server");
+    var prerenderResult = await prerenderer.RenderToString("ClientApp/dist/main-server", customDataParameter: Model.NodeSession);
+    //var publicSessionJson = prerenderResult?.Globals?["nodeSession"]["public"]?.ToString();
     var initialReduxStateJson = prerenderResult?.Globals?["initialReduxState"]?.ToString();
     var helmetStringsPrerender = prerenderResult?.Globals?["helmetStrings"]?.ToString();
+    //var completedTasksJson = prerenderResult?.Globals?["completedTasks"]?.ToString();
+
+    var IsDevelopment = Environment.GetEnvironmentVariables()["ASPNETCORE_ENVIRONMENT"]?.ToString() == "Development";
 }
 
 <html>
@@ -15,13 +20,24 @@
     <meta charset="utf-8"/>
     @Html.Raw(helmetStringsPrerender)
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
+    <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true"/>
+    <base href="~/"/>
+    @if (!IsDevelopment)
+    {
+        <link rel="stylesheet" href="~/dist/site.css" asp-append-version="true"/>
+    }
+    <script async="async" src="~/dist/bundle.js"></script>
 </head>
 <body>
-<div id="react-app">@Html.Raw(prerenderResult?.Html)</div>
+@Html.AntiForgeryToken()
+<div id="xsrf-token" data-xsrf-token="@ViewBag.AntiForgeryRequestToken "></div>
+<div id="access-token" data-access-token="@ViewBag.accessToken "></div>
+<div id="react-app">
+    @Html.Raw(prerenderResult?.Html)
+</div>
 <script>
-        window.initialState = @Html.Raw(initialReduxStateJson);
-    </script>
-<script src="~/dist/bundle.js" asp-append-version="true"></script>
+        window.initialReduxState = @Html.Raw(initialReduxStateJson);
+    
+</script>
 </body>
 </html>
