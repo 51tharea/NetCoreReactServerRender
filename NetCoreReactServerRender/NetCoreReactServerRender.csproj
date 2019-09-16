@@ -7,35 +7,29 @@
 
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.7" />
-        <PackageReference Include="Microsoft.AspNetCore.App" />
-        <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.AspNetCore.All" />
+        <PackageReference Include="Microsoft.AspNetCore.App">
+            <Version>2.2.7</Version>
+        </PackageReference>
+        <PackageReference Include="Microsoft.AspNetCore.Razor.Design" PrivateAssets="All">
+            <Version>2.2.0</Version>
+        </PackageReference>
     </ItemGroup>
-
 
     <ItemGroup>
-      <Compile Remove="Views\**" />
-      <Compile Remove="Controllers\**" />
+        <ImplicitPackageReferenceVersion Update="Microsoft.NETCore.App">
+            <DefaultVersion>%(LatestVersion)</DefaultVersion>
+        </ImplicitPackageReferenceVersion>
+        
+        <ImplicitPackageReferenceVersion Update="Microsoft.AspNetCore.App">
+            <DefaultVersion>%(LatestVersion)</DefaultVersion>
+        </ImplicitPackageReferenceVersion>
+
+        <ImplicitPackageReferenceVersion Update="Microsoft.AspNetCore.All">
+            <DefaultVersion>%(LatestVersion)</DefaultVersion>
+        </ImplicitPackageReferenceVersion>
+
     </ItemGroup>
-
-
-    <ItemGroup>
-      <EmbeddedResource Remove="Views\**" />
-      <EmbeddedResource Remove="Controllers\**" />
-    </ItemGroup>
-
-
-    <ItemGroup>
-      <None Remove="Views\**" />
-      <None Remove="Controllers\**" />
-    </ItemGroup>
-
-
-    <ItemGroup>
-      <Content Remove="Views\**" />
-      <Content Remove="Controllers\**" />
-    </ItemGroup>
-
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
@@ -80,5 +74,4 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\dist\jquery.min.map" />
       <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\LICENSE.txt" />
     </ItemGroup>
-
 </Project>

@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="58143885-e104-4cad-8115-f80fa2ed105e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NetCoreReactServerRender/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NetCoreReactServerRender/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/dist/main-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/dist/main-server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/wwwroot/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/wwwroot/dist/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetCoreReactServerRender/wwwroot/dist/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/NetCoreReactServerRender/wwwroot/dist/bundle.js.map" afterDir="false" />
+>>>>>>> ea15b1590d9608b960beee006d2a7e96cf4d5bab
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="React File" />
       </list>
     </option>
   </component>
@@ -21,12 +28,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/NetCoreReactServerRender/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NetCoreReactServerRender/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0FB8EB98-E7AB-46B3-B396-3ADC0C337A86/20/5bb50b40/WebpackDevMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NetCoreReactServerRender/Pages/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NetCoreReactServerRender/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NetCoreReactServerRender/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NetCoreReactServerRender/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NetCoreReactServerRender/Startup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -37,12 +42,17 @@
         <option value="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/.babelrc" />
         <option value="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/package.json" />
         <option value="$PROJECT_DIR$/NetCoreReactServerRender/Pages/Index.cshtml.cs" />
-        <option value="$PROJECT_DIR$/NetCoreReactServerRender/webpack.config.js" />
-        <option value="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/boot-client.js" />
-        <option value="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/boot-server.js" />
         <option value="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/configureStore.js" />
+        <option value="$PROJECT_DIR$/NetCoreReactServerRender/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/boot-client.js" />
+        <option value="$PROJECT_DIR$/NetCoreReactServerRender/NetCoreReactServerRender.csproj" />
+        <option value="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/boot-server.js" />
+        <option value="$PROJECT_DIR$/NetCoreReactServerRender/.babelrc" />
         <option value="$PROJECT_DIR$/NetCoreReactServerRender/Startup.cs" />
+        <option value="$PROJECT_DIR$/NetCoreReactServerRender/package.json" />
+        <option value="$PROJECT_DIR$/NetCoreReactServerRender/webpack.config.js" />
         <option value="$PROJECT_DIR$/NetCoreReactServerRender/Pages/Index.cshtml" />
+        <option value="$PROJECT_DIR$/NetCoreReactServerRender/ClientApp/src/index.jsx" />
       </list>
     </option>
   </component>
@@ -53,13 +63,21 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1QmegPcjVG72ZIL3eiuLxc8EHRp" />
+<<<<<<< HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+>>>>>>> ea15b1590d9608b960beee006d2a7e96cf4d5bab
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.4.0" />
-    <property name="last_opened_file_path" value="D:/Projects/App.Bidding" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.16.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../App.Bidding" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -108,6 +126,10 @@
         <option name="Build" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.NetCoreReactServerRender" />
+      <item itemvalue=".NET Launch Settings Profile.NetCoreReactServerRender: IIS Express" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -121,7 +143,11 @@
       <updated>1568380310123</updated>
       <workItem from="1568380311820" duration="1567000" />
       <workItem from="1568381965004" duration="738000" />
+<<<<<<< HEAD
       <workItem from="1568388559322" duration="599000" />
+=======
+      <workItem from="1568390029519" duration="6237000" />
+>>>>>>> ea15b1590d9608b960beee006d2a7e96cf4d5bab
     </task>
     <servers />
   </component>
@@ -142,6 +168,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>
   <component name="XDebuggerManager">

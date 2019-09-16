@@ -1,2 +1,2 @@
-# NetCoreReactServerRender
- .net core react server render 
+# NetCore React Server Render
+ .net core react server render ecma script

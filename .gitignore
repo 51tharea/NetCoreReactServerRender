@@ -347,3 +347,8 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+.idea/.idea.NetCoreReactServerRender/.idea/contentModel.xml
+.idea/.idea.NetCoreReactServerRender/.idea/contentModel.xml
+.idea/.idea.NetCoreReactServerRender/.idea/dictionaries/Eclips.xml
+.idea/.idea.NetCoreReactServerRender/.idea/misc.xml
+.idea/.idea.NetCoreReactServerRender/.idea/workspace.xml

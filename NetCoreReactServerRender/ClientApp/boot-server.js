@@ -1,11 +1,14 @@
-import { createServerRenderer } from "aspnet-prerendering";
-import { createMemoryHistory } from "history";
+import {createServerRenderer} from "aspnet-prerendering";
+import {createMemoryHistory} from "history";
 import React from "react";
-import { renderToString } from "react-dom/server";
-import { Helmet } from "react-helmet";
-import { Provider } from "react-redux";
-import { StaticRouter } from "react-router-dom";
+import {renderToString} from "react-dom/server";
+import {Helmet} from "react-helmet";
+import {Provider} from "react-redux";
+import {StaticRouter} from "react-router-dom";
 import configureStore from "./configureStore";
+import {hot} from "react-hot-loader";
+import {Application} from "./src";
+import {ConnectedRouter} from "connected-react-router";
 
 function renderHelmet() {
     const helmetData = Helmet.renderStatic();
@@ -18,6 +21,7 @@ function renderHelmet() {
     });
     return helmetStrings;
 }
+
 const createGlobals = (initialReduxState, helmetStrings) => ({
     initialReduxState,
     helmetStrings
@@ -33,7 +37,7 @@ export default createServerRenderer(params => {
         });
         const store = configureStore(history);
         const routerContext = {};
-
+        const App = hot(module)(Application);
         // Prepare an instance of the application
         const app = (
             <Provider store={store}>
@@ -42,7 +46,7 @@ export default createServerRenderer(params => {
                     context={routerContext}
                     location={params.location.path}
                 >
-                    <div>your regular react router goes here</div>
+                    <App/>
                 </StaticRouter>
             </Provider>
         );
