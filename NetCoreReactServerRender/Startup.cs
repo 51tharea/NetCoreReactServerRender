@@ -21,14 +21,14 @@ namespace NetCoreReactServerRender
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        private IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc()
-                .AddRazorPagesOptions(options => { options.Conventions.AddPageRoute("/index", "{*url}"); })
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddRazorPages();
+                //.AddRazorPagesOptions(options => { options.Conventions.AddPageRoute("/index", "{*url}"); })
+                //.SetCompatibilityVersion(CompatibilityVersion.Latest);
             services.AddSpaPrerenderer();
             services.AddNodeServices();
             // In production, the React files will be served from this directory
@@ -41,7 +41,7 @@ namespace NetCoreReactServerRender
             app.Use(async (context, next) =>
             {
                 context.Items.Add("ServiceUser", new { });
-
+                context.Items.Add("Lang", "tr-TR");
 
                 await next.Invoke();
             });
@@ -65,7 +65,10 @@ namespace NetCoreReactServerRender
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
-            app.UseMvc();
+
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints => { endpoints.MapRazorPages(); });
         }
     }
 }

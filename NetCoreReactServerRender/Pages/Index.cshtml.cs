@@ -11,6 +11,8 @@ namespace NetCoreReactServerRender.Pages
     {
         [BindProperty] public NodeSession NodeSession { get; set; }
         [BindProperty] public ServiceUser ServiceUser { get; set; }
+        [BindProperty] public BrowserClient BrowserClient { get; set; }
+        [BindProperty] public string UserLang { get; set; }
 
         public void OnGet()
         {
@@ -23,6 +25,11 @@ namespace NetCoreReactServerRender.Pages
                 Public = new PublicSession
                 {
                     ServiceUser = ServiceUser
+                },
+                
+                BrowserClient = new BrowserClient
+                {
+                    Language = UserLang
                 }
             };
         }
@@ -30,7 +37,9 @@ namespace NetCoreReactServerRender.Pages
         public override void OnPageHandlerExecuting(PageHandlerExecutingContext context)
         {
             context.HttpContext.Items.TryGetValue("ServiceUser", out var serviceUser);
+            context.HttpContext.Items.TryGetValue("Lang", out var userLang);
             ServiceUser = serviceUser as ServiceUser;
+            UserLang = userLang as string;
 
             base.OnPageHandlerExecuting(context);
         }

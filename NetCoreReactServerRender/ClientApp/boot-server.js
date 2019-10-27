@@ -8,6 +8,7 @@ import {StaticRouter} from "react-router-dom";
 import configureStore from "./configureStore";
 import {hot} from "react-hot-loader";
 import {Application} from "./src";
+
 import {ConnectedRouter} from "connected-react-router";
 
 function renderHelmet() {
@@ -22,12 +23,16 @@ function renderHelmet() {
     return helmetStrings;
 }
 
-const createGlobals = (initialReduxState, helmetStrings) => ({
+const createGlobals = (nodeSession, initialReduxState, helmetStrings) => ({
+    nodeSession,
     initialReduxState,
-    helmetStrings
+    helmetStrings,
+
 });
 
 export default createServerRenderer(params => {
+
+
     return new Promise(resolve => {
         //  Prepare Redux store with in-memory history
         const basename = params.baseUrl.substring(0, params.baseUrl.length - 1); // Remove trailing slash.
@@ -57,7 +62,8 @@ export default createServerRenderer(params => {
         if (routerContext.url) {
             resolve({
                 redirectUrl: routerContext.url,
-                globals: createGlobals(store.getState(), renderHelmet())
+                globals: createGlobals(params.data, store.getState(), renderHelmet()),
+
             });
 
             return;
@@ -65,7 +71,7 @@ export default createServerRenderer(params => {
         //  We also send the redux store state, so the client can continue execution where the server left off.
         resolve({
             html: renderApp(),
-            globals: createGlobals(store.getState(), renderHelmet())
+            globals: createGlobals(params.data, store.getState(), renderHelmet())
         });
     });
 });

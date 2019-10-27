@@ -14,6 +14,8 @@ namespace NetCoreReactServerRender.Models
         /// Contains private session that can be used only by NodeServices.
         /// </summary>
         public PrivateSession Private { get; set; }
+
+        public BrowserClient BrowserClient { get; set; }
     }
 
     public class PublicSession
@@ -29,5 +31,10 @@ namespace NetCoreReactServerRender.Models
     public class ServiceUser
     {
         public string Login { get; set; }
+    }
+
+    public class BrowserClient
+    {
+        public string Language { get; set; }
     }
 }

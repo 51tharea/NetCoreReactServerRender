@@ -1,6 +1,7 @@
 @page
 @model NetCoreReactServerRender.Pages.Index
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@addTagHelper "*, Microsoft.AspNetCore.SpaServices"
 @inject Microsoft.AspNetCore.SpaServices.Prerendering.ISpaPrerenderer prerenderer
 
 @{
@@ -11,11 +12,11 @@
     var initialReduxStateJson = prerenderResult?.Globals?["initialReduxState"]?.ToString();
     var helmetStringsPrerender = prerenderResult?.Globals?["helmetStrings"]?.ToString();
     //var completedTasksJson = prerenderResult?.Globals?["completedTasks"]?.ToString();
-
+    // var lang = prerenderResult?.Globals["nodeSession"]["browserClient"]?.ToString();
     var IsDevelopment = Environment.GetEnvironmentVariables()["ASPNETCORE_ENVIRONMENT"]?.ToString() == "Development";
 }
 
-<html>
+<html lang="">
 <head>
     <meta charset="utf-8"/>
     @Html.Raw(helmetStringsPrerender)
@@ -37,7 +38,6 @@
 </div>
 <script>
         window.initialReduxState = @Html.Raw(initialReduxStateJson);
-    
 </script>
 </body>
 </html>
