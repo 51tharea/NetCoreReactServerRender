@@ -26,11 +26,21 @@ namespace NetCoreReactServerRender
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
-                //.AddRazorPagesOptions(options => { options.Conventions.AddPageRoute("/index", "{*url}"); })
-                //.SetCompatibilityVersion(CompatibilityVersion.Latest);
-            services.AddSpaPrerenderer();
+            services.AddRazorPages(options =>
+            {
+              
+            });
+            //.AddRazorPagesOptions(options => { options.Conventions.AddPageRoute("/index", "{*url}"); })
+            //.SetCompatibilityVersion(CompatibilityVersion.Latest);
             services.AddNodeServices();
+            services.AddSpaPrerenderer();
+            services.AddAntiforgery(options => 
+            {
+                // Set Cookie properties using CookieBuilder properties†.
+                options.FormFieldName = "csrf";
+                options.HeaderName = "csrf";
+                options.SuppressXFrameOptionsHeader = false;
+            });
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "wwwroot/build"; });
         }

@@ -4,7 +4,7 @@ const Application = () => {
     return (
         <Fragment>
             <div> .Net Core 3.0 Server Render with Hot Module Loaded... </div>
-            <p> Razar Page </p>
+            <p> Razor Page </p>
         </Fragment>
         
     )

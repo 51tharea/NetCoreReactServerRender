@@ -9,28 +9,25 @@ namespace NetCoreReactServerRender.Pages
 {
     public class Index : PageModel
     {
-        [BindProperty] public NodeSession NodeSession { get; set; }
-        [BindProperty] public ServiceUser ServiceUser { get; set; }
-        [BindProperty] public BrowserClient BrowserClient { get; set; }
-        [BindProperty] public string UserLang { get; set; }
+        [BindProperty] public Global Global { get; set; }
+        private ServiceUser ServiceUser { get; set; }
+        private BrowserClient BrowserClient { get; set; }
+
 
         public void OnGet()
         {
-            NodeSession = new NodeSession
+            Global = new Global
             {
-                Private = new PrivateSession
+                PrivateSession = new PrivateSession
                 {
                     Cookie = string.Join(", ", Request.Cookies.Select(x => $"{x.Key}={x.Value};"))
                 },
-                Public = new PublicSession
+                PublicSession = new PublicSession
                 {
                     ServiceUser = ServiceUser
                 },
-                
-                BrowserClient = new BrowserClient
-                {
-                    Language = UserLang
-                }
+
+                BrowserClient = BrowserClient
             };
         }
 
@@ -39,7 +36,10 @@ namespace NetCoreReactServerRender.Pages
             context.HttpContext.Items.TryGetValue("ServiceUser", out var serviceUser);
             context.HttpContext.Items.TryGetValue("Lang", out var userLang);
             ServiceUser = serviceUser as ServiceUser;
-            UserLang = userLang as string;
+            BrowserClient = new BrowserClient
+            {
+                Language = userLang as string
+            };
 
             base.OnPageHandlerExecuting(context);
         }

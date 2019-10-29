@@ -16,6 +16,9 @@
           <e p="dist" t="Include">
             <e p="main-server.js" t="Include" />
           </e>
+          <e p="Models" t="Include">
+            <e p="Result.jsx" t="Include" />
+          </e>
           <e p="src" t="Include">
             <e p="index.jsx" t="Include" />
           </e>
@@ -24,7 +27,11 @@
           </e>
         </e>
         <e p="Models" t="Include">
-          <e p="NodeSession.cs" t="Include" />
+          <e p="BrowserClient.cs" t="Include" />
+          <e p="Global.cs" t="Include" />
+          <e p="PrivateSession.cs" t="Include" />
+          <e p="PublicSession.cs" t="Include" />
+          <e p="ServiceUser.cs" t="Include" />
         </e>
         <e p="NetCoreReactServerRender.csproj" t="IncludeRecursive" />
         <e p="node_modules\@babel\core" t="IncludeRecursive" />
