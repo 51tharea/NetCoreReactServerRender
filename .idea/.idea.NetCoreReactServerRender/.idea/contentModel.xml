@@ -19,6 +19,9 @@
           <e p="Models" t="Include">
             <e p="Result.jsx" t="Include" />
           </e>
+          <e p="Pages" t="Include">
+            <e p="index.jsx" t="Include" />
+          </e>
           <e p="src" t="Include">
             <e p="index.jsx" t="Include" />
           </e>
