@@ -1,5 +1,4 @@
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -7,12 +6,12 @@ using NetCoreReactServerRender.Models;
 
 namespace NetCoreReactServerRender.Pages
 {
+
     public class Index : PageModel
     {
         [BindProperty] public Global Global { get; set; }
         private ServiceUser ServiceUser { get; set; }
         private BrowserClient BrowserClient { get; set; }
-
 
         public void OnGet()
         {
@@ -44,4 +43,5 @@ namespace NetCoreReactServerRender.Pages
             base.OnPageHandlerExecuting(context);
         }
     }
+
 }

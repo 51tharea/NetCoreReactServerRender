@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Eclips\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Eclips\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_NetCoreReactServerRender.2111094996.00" t="ExcludeRecursive" />
+    <e p="C:\Users\can.acar\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\can.acar\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_NetCoreReactServerRender.2111094996.00" t="ExcludeRecursive" />
     <e p="D:\Projects\NetCoreReactServerRender" t="IncludeFlat">
       <e p="NetCoreReactServerRender" t="IncludeRecursive">
         <e p=".babelrc" t="Include" />
@@ -26,6 +26,7 @@
             <e p="index.jsx" t="Include" />
           </e>
           <e p="styles" t="Include">
+            <e p="header.css" t="Include" />
             <e p="index.css" t="Include" />
           </e>
         </e>
@@ -46,7 +47,16 @@
         <e p="node_modules\@babel\preset-env" t="IncludeRecursive" />
         <e p="node_modules\@babel\preset-react" t="IncludeRecursive" />
         <e p="node_modules\@hot-loader\react-dom" t="IncludeRecursive" />
-        <e p="node_modules\@types" t="IncludeRecursive" />
+        <e p="node_modules\@types" t="IncludeRecursive">
+          <e p="anymatch" t="IncludeRecursive" />
+          <e p="events" t="IncludeRecursive" />
+          <e p="minimatch" t="IncludeRecursive" />
+          <e p="node" t="IncludeRecursive" />
+          <e p="source-list-map" t="IncludeRecursive" />
+          <e p="tapable" t="IncludeRecursive" />
+          <e p="uglify-js" t="IncludeRecursive" />
+          <e p="webpack-sources" t="IncludeRecursive" />
+        </e>
         <e p="node_modules\aspnet-prerendering" t="IncludeRecursive" />
         <e p="node_modules\aspnet-webpack" t="IncludeRecursive" />
         <e p="node_modules\aspnet-webpack-react" t="IncludeRecursive" />
@@ -54,6 +64,7 @@
         <e p="node_modules\babel-plugin-syntax-dynamic-import" t="IncludeRecursive" />
         <e p="node_modules\babel-plugin-transform-class-properties" t="IncludeRecursive" />
         <e p="node_modules\case-sensitive-paths-webpack-plugin" t="IncludeRecursive" />
+        <e p="node_modules\clean-webpack-plugin" t="IncludeRecursive" />
         <e p="node_modules\connected-react-router" t="IncludeRecursive" />
         <e p="node_modules\css-loader" t="IncludeRecursive" />
         <e p="node_modules\cssnano" t="IncludeRecursive" />
@@ -68,6 +79,11 @@
         <e p="node_modules\node-sass" t="IncludeRecursive" />
         <e p="node_modules\npm-check-updates" t="IncludeRecursive" />
         <e p="node_modules\optimize-css-assets-webpack-plugin" t="IncludeRecursive" />
+        <e p="node_modules\postcss-flexbugs-fixes" t="IncludeRecursive" />
+        <e p="node_modules\postcss-loader" t="IncludeRecursive" />
+        <e p="node_modules\postcss-normalize" t="IncludeRecursive" />
+        <e p="node_modules\postcss-preset-env" t="IncludeRecursive" />
+        <e p="node_modules\postcss-safe-parser" t="IncludeRecursive" />
         <e p="node_modules\react" t="IncludeRecursive" />
         <e p="node_modules\react-dev-utils" t="IncludeRecursive" />
         <e p="node_modules\react-dom" t="IncludeRecursive" />
@@ -77,6 +93,7 @@
         <e p="node_modules\react-router" t="IncludeRecursive" />
         <e p="node_modules\react-router-dom" t="IncludeRecursive" />
         <e p="node_modules\redux" t="IncludeRecursive" />
+        <e p="node_modules\resolve-url-loader" t="IncludeRecursive" />
         <e p="node_modules\rimraf" t="IncludeRecursive" />
         <e p="node_modules\rxjs" t="IncludeRecursive" />
         <e p="node_modules\sass-loader" t="IncludeRecursive" />
@@ -93,8 +110,9 @@
         <e p="node_modules\webpack-merge" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp3.0" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="NetCoreReactServerRender.AssemblyInfo.cs" t="Include" />
+              <e p="NetCoreReactServerRender.RazorAssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -112,8 +130,11 @@
         <e p="webpack.config.js" t="Include" />
         <e p="wwwroot" t="Include">
           <e p="dist" t="Include">
-            <e p="bundle.js" t="Include" />
-            <e p="bundle.js.map" t="Include" />
+            <e p="css" t="Include" />
+            <e p="js" t="Include">
+              <e p="app-bundle.js" t="Include" />
+              <e p="app-bundle.js.map" t="Include" />
+            </e>
           </e>
           <e p="favicon.ico" t="Include" />
         </e>

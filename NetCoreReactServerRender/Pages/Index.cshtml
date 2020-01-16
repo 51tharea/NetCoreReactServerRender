@@ -2,20 +2,20 @@
 @model NetCoreReactServerRender.Pages.Index
 @addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
 @addTagHelper "*, Microsoft.AspNetCore.SpaServices"
-@inject Microsoft.AspNetCore.SpaServices.Prerendering.ISpaPrerenderer prerenderer
+@inject Microsoft.AspNetCore.SpaServices.Prerendering.ISpaPrerenderer Prerenderer
 
 
 @{
     Layout = null;
 
-    var prerenderResult = await prerenderer.RenderToString("ClientApp/dist/main-server", customDataParameter: Model.Global);
+    var prerenderResult = await Prerenderer.RenderToString("ClientApp/dist/main-server", customDataParameter: Model.Global);
     var publicSessionJson = prerenderResult?.Globals?["global"]["publicSession"]?.ToString();
     var initialReduxStateJson = prerenderResult?.Globals?["initialReduxState"]?.ToString();
     var helmetStringsPrerender = prerenderResult?.Globals?["helmetStrings"]?.ToString();
     //var completedTasksJson = prerenderResult?.Globals?["completedTasks"]?.ToString();
-    var browserClient = prerenderResult.Globals?["global"]?["browserClient"]?.ToString();
-    var lang = prerenderResult.Globals?["global"]?["browserClient"]?["language"]?.ToString();
-    var IsDevelopment = Environment.GetEnvironmentVariables()["ASPNETCORE_ENVIRONMENT"]?.ToString() == "Development";
+    var browserClient = prerenderResult?.Globals?["global"]?["browserClient"]?.ToString();
+    var lang = prerenderResult?.Globals?["global"]?["browserClient"]?["language"]?.ToString();
+    var isDevelopment = Environment.GetEnvironmentVariables()["ASPNETCORE_ENVIRONMENT"]?.ToString() == "Development";
 }
 
 <html lang="@Html.Raw(lang)">
@@ -23,11 +23,11 @@
     <meta charset="utf-8"/>
     @Html.Raw(helmetStringsPrerender)
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true"/>
+ 
     <base href="~/"/>
-    @if (!IsDevelopment)
+    @if (!isDevelopment)
     {
-        <link rel="stylesheet" href="~/dist/site.css" asp-append-version="true"/>
+        <link rel="stylesheet" type="text/css" href="./dist/css/app.css"/>
     }
     <script>
         window.publicSession = @Html.Raw(string.IsNullOrEmpty(publicSessionJson) ? "null" : publicSessionJson);    
@@ -36,14 +36,13 @@
     </script>
 </head>
 <body>
-@Html.AntiForgeryToken()
-
 <div id="react-app">
+    @Html.AntiForgeryToken()
     @Html.Raw(prerenderResult?.Html)
 </div>
 <script>
         window.initialReduxState = @Html.Raw(initialReduxStateJson);
 </script>
-<script async="async" src="~/dist/bundle.js"></script>
+<script async="async" src="~/dist/js/app-bundle.js"></script>
 </body>
 </html>
