@@ -14,24 +14,14 @@
           <e p="boot-server.js" t="Include" />
           <e p="configureStore.js" t="Include" />
           <e p="dist" t="Include">
-            <e p="0.js" t="Include" />
-            <e p="1.js" t="Include" />
-            <e p="157f12e5281adbe0b2f2.hot-update.json" t="Include" />
-            <e p="5c6991be0635609cc30a.hot-update.json" t="Include" />
             <e p="css" t="Include">
               <e p="main-server.css" t="Include" />
               <e p="main-server.css.map" t="Include" />
             </e>
             <e p="js" t="Include">
-              <e p="css" t="Include">
-                <e p="main-server.css" t="Include" />
-                <e p="main-server.css.map" t="Include" />
-              </e>
               <e p="main-server.js" t="Include" />
               <e p="main-server.js.map" t="Include" />
             </e>
-            <e p="main-server.157f12e5281adbe0b2f2.hot-update.js" t="Include" />
-            <e p="main-server.5c6991be0635609cc30a.hot-update.js" t="Include" />
           </e>
           <e p="Models" t="Include">
             <e p="Result.jsx" t="Include" />
@@ -159,7 +149,6 @@
           </e>
           <e p="favicon.ico" t="Include" />
         </e>
-        <e p="yarn.lock" t="Include" />
       </e>
       <e p="NetCoreReactServerRender.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
