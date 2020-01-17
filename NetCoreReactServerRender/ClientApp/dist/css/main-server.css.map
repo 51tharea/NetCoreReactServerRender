@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\..\\./ClientApp/styles/header.css"],"names":[],"mappings":"AAAA;AACA;AACA,C","file":"css/main-server.css","sourcesContent":[".header{\r\n    background-color: #CACACA;\r\n}"],"sourceRoot":""}

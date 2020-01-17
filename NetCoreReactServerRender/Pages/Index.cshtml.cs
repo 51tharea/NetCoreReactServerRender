@@ -37,7 +37,8 @@ namespace NetCoreReactServerRender.Pages
             ServiceUser = serviceUser as ServiceUser;
             BrowserClient = new BrowserClient
             {
-                Language = userLang as string
+                Language = userLang as string,
+               
             };
 
             base.OnPageHandlerExecuting(context);

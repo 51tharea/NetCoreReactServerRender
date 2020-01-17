@@ -14,7 +14,24 @@
           <e p="boot-server.js" t="Include" />
           <e p="configureStore.js" t="Include" />
           <e p="dist" t="Include">
-            <e p="main-server.js" t="Include" />
+            <e p="0.js" t="Include" />
+            <e p="1.js" t="Include" />
+            <e p="157f12e5281adbe0b2f2.hot-update.json" t="Include" />
+            <e p="5c6991be0635609cc30a.hot-update.json" t="Include" />
+            <e p="css" t="Include">
+              <e p="main-server.css" t="Include" />
+              <e p="main-server.css.map" t="Include" />
+            </e>
+            <e p="js" t="Include">
+              <e p="css" t="Include">
+                <e p="main-server.css" t="Include" />
+                <e p="main-server.css.map" t="Include" />
+              </e>
+              <e p="main-server.js" t="Include" />
+              <e p="main-server.js.map" t="Include" />
+            </e>
+            <e p="main-server.157f12e5281adbe0b2f2.hot-update.js" t="Include" />
+            <e p="main-server.5c6991be0635609cc30a.hot-update.js" t="Include" />
           </e>
           <e p="Models" t="Include">
             <e p="Result.jsx" t="Include" />
@@ -60,6 +77,7 @@
         <e p="node_modules\aspnet-prerendering" t="IncludeRecursive" />
         <e p="node_modules\aspnet-webpack" t="IncludeRecursive" />
         <e p="node_modules\aspnet-webpack-react" t="IncludeRecursive" />
+        <e p="node_modules\autoprefixer" t="IncludeRecursive" />
         <e p="node_modules\babel-loader" t="IncludeRecursive" />
         <e p="node_modules\babel-plugin-syntax-dynamic-import" t="IncludeRecursive" />
         <e p="node_modules\babel-plugin-transform-class-properties" t="IncludeRecursive" />
@@ -73,6 +91,7 @@
         <e p="node_modules\history" t="IncludeRecursive" />
         <e p="node_modules\ignore-loader" t="IncludeRecursive" />
         <e p="node_modules\immutable" t="IncludeRecursive" />
+        <e p="node_modules\isomorphic-style-loader" t="IncludeRecursive" />
         <e p="node_modules\json-to-url" t="IncludeRecursive" />
         <e p="node_modules\mini-css-extract-plugin" t="IncludeRecursive" />
         <e p="node_modules\node-noop" t="IncludeRecursive" />
@@ -132,6 +151,8 @@
           <e p="dist" t="Include">
             <e p="css" t="Include" />
             <e p="js" t="Include">
+              <e p="0-bundle.js" t="Include" />
+              <e p="0-bundle.js.map" t="Include" />
               <e p="app-bundle.js" t="Include" />
               <e p="app-bundle.js.map" t="Include" />
             </e>

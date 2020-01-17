@@ -4,11 +4,10 @@
 @addTagHelper "*, Microsoft.AspNetCore.SpaServices"
 @inject Microsoft.AspNetCore.SpaServices.Prerendering.ISpaPrerenderer Prerenderer
 
-
 @{
     Layout = null;
 
-    var prerenderResult = await Prerenderer.RenderToString("ClientApp/dist/main-server", customDataParameter: Model.Global);
+    var prerenderResult = await Prerenderer.RenderToString("ClientApp/dist/js/main-server", customDataParameter: Model.Global);
     var publicSessionJson = prerenderResult?.Globals?["global"]["publicSession"]?.ToString();
     var initialReduxStateJson = prerenderResult?.Globals?["initialReduxState"]?.ToString();
     var helmetStringsPrerender = prerenderResult?.Globals?["helmetStrings"]?.ToString();
@@ -16,15 +15,15 @@
     var browserClient = prerenderResult?.Globals?["global"]?["browserClient"]?.ToString();
     var lang = prerenderResult?.Globals?["global"]?["browserClient"]?["language"]?.ToString();
     var isDevelopment = Environment.GetEnvironmentVariables()["ASPNETCORE_ENVIRONMENT"]?.ToString() == "Development";
+
 }
 
 <html lang="@Html.Raw(lang)">
 <head>
     <meta charset="utf-8"/>
+    <base href="~/"/>
     @Html.Raw(helmetStringsPrerender)
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- 
-    <base href="~/"/>
     @if (!isDevelopment)
     {
         <link rel="stylesheet" type="text/css" href="./dist/css/app.css"/>
@@ -36,13 +35,12 @@
     </script>
 </head>
 <body>
-<div id="react-app">
-    @Html.AntiForgeryToken()
-    @Html.Raw(prerenderResult?.Html)
-</div>
+
+<div id="root">@Html.Raw(prerenderResult?.Html)</div>
 <script>
         window.initialReduxState = @Html.Raw(initialReduxStateJson);
 </script>
 <script async="async" src="~/dist/js/app-bundle.js"></script>
 </body>
+
 </html>

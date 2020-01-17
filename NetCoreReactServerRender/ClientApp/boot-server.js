@@ -1,7 +1,7 @@
 import {createServerRenderer} from "aspnet-prerendering";
 import {createMemoryHistory} from "history";
 import React from "react";
-import {renderToString, renderToNodeStream} from "react-dom/server";
+import {renderToString} from "react-dom/server";
 import {Helmet} from "react-helmet";
 import {Provider} from "react-redux";
 import {StaticRouter} from "react-router-dom";
@@ -9,7 +9,6 @@ import configureStore from "./configureStore";
 import {hot} from "react-hot-loader";
 import {Application} from "./src";
 
-import {ConnectedRouter} from "connected-react-router";
 
 function renderHelmet() {
     const helmetData = Helmet.renderStatic();

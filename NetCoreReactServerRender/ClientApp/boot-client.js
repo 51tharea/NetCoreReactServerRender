@@ -8,6 +8,7 @@ import configureStore from "./configureStore";
 import {Application} from "./src";
 import "./styles/index.css";
 
+
 const history = createBrowserHistory();
 
 
@@ -18,6 +19,8 @@ const store = configureStore(history, initialState);
 
 const App = hot(module)(Application);
 
+const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
+const rootElement = document.getElementById('root');
 
 function renderApp() {
     hydrate(
@@ -26,7 +29,7 @@ function renderApp() {
                 <App/>
             </ConnectedRouter>
         </Provider>,
-        document.getElementById("react-app")
+        rootElement
     );
 }
 

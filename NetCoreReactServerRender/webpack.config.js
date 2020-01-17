@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const CssNanoPlugin = require("cssnano");
+const safePostCssParser = require('postcss-safe-parser');
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const postcssNormalize = require('postcss-normalize');
@@ -30,15 +31,49 @@ module.exports = (env) => {
                     // Production.
                     new TerserWebpackPlugin({
                         terserOptions: {
+                            parse: {
+                                ecma: 8,
+                            },
+                            compress: {
+                                ecma: 5,
+                                warnings: false,
+                                // Disabled because of an issue with Uglify breaking seemingly valid code:
+                                // https://github.com/facebook/create-react-app/issues/2376
+                                // Pending further investigation:
+                                // https://github.com/mishoo/UglifyJS2/issues/2011
+                                comparisons: false,
+                                // Disabled because of an issue with Terser breaking valid code:
+                                // https://github.com/facebook/create-react-app/issues/5250
+                                // Pending further investigation:
+                                // https://github.com/terser-js/terser/issues/120
+                                inline: 2,
+                            },
+                            keep_classnames: !isDevBuild,
+                            keep_fnames: !isDevBuild,
+                            mangle: {
+                                safari10: true,
+                            },
                             output: {
+                                ecma: 5,
+                                ascii_only: true,
                                 comments: false,
                             },
                         },
+                        sourceMap: false
                     }),
                     new OptimizeCSSAssetsPlugin({
-                        cssProcessor: CssNanoPlugin,
-                        cssProcessorPluginOptions: {
-                            preset: ["default", {discardComments: {removeAll: true}}]
+                        cssProcessorOptions: {
+                            parser: safePostCssParser,
+                            map: shouldUseSourceMap
+                                ? {
+                                    // `inline: false` forces the sourcemap to be output into a
+                                    // separate file
+                                    inline: false,
+                                    // `annotation: true` appends the sourceMappingURL to the end of
+                                    // the css file, helping the browser find the sourcemap
+                                    annotation: true,
+                                }
+                                : false,
                         }
                     })
                 ] : [
@@ -142,70 +177,110 @@ module.exports = (env) => {
             filename: 'js/[name]-bundle.js'
 
         },
-        resolveLoader: {
-            modules: [
-                'node_modules',
-                path.join(__dirname, '../node_modules'),
-            ]
-        },
+
         module: {
             rules: [
                 {
-                    oneOf: [
+                    test: /\.css$/i,
+                    use: isDevBuild ? ['style-loader',
                         {
-                            test: /\.css$/,
-                            use: isDevBuild ? [
-                                'style-loader',
-                                'css-loader'
-
-                            ] : [MiniCssExtractPlugin.loader, 'css-loader']
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1,
+                            }
                         },
                         {
-                            test: /\.(scss|sass)$/,
-                            use: isDevBuild ? [
-                                'style-loader',
-                                'css-loader',
-                                'sass-loader'
-                            ] : [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-                        }]
+                            loader: 'postcss-loader',
+                            options: {
+                                ident: 'postcss',
+                                plugins: () => [
+                                    require('postcss-flexbugs-fixes'),
+                                    require('postcss-preset-env')({
+                                        autoprefixer: {
+                                            flexbox: 'no-2009',
+                                        },
+                                        stage: 3,
+                                    }),
+                                    postcssNormalize(),
+                                ],
+                                sourceMap: !isDevBuild
+                            }
+                        }] : [
+                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1,
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                ident: 'postcss',
+                                plugins: () => [
+                                    require('postcss-flexbugs-fixes'),
+                                    require('postcss-preset-env')({
+                                        autoprefixer: {
+                                            flexbox: 'no-2009',
+                                        },
+                                        stage: 3,
+                                    }),
+                                    postcssNormalize(),
+                                ],
+                                sourceMap: !isDevBuild
+                            }
+                        }],
                 }
             ]
         },
         plugins: [
             new MiniCssExtractPlugin({
-                // Options similar to the same options in webpackOptions.output
-                // both options are optional
                 sourceMap: true,
                 filename: 'css/[name].css',
-                chunkFilename: 'css/[id].css',
             }),
             new webpack.SourceMapDevToolPlugin({
                 filename: '[file].map', // Remove this line if you prefer inline source maps.
                 moduleFilenameTemplate: path.relative(clientBundleOutputDir, '[resourcePath]') // Point sourcemap entries to the original file locations on disk
             })
         ],
-        node: {
-            dgram: 'empty',
-            fs: 'empty',
-            net: 'empty',
-            tls: 'empty',
-            child_process: 'empty',
-        },
+
     });
 
 
     const serverBundleConfig = merge(sharedConfig(), {
         module: {
             rules: [
+                {
+                    test: /\.(css)$/,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1,
+                            }
+                        },
+                    ]
+                },
                 {test: /\.(scss|sass)$/, use: "ignore-loader"}
             ]
         },
         resolve: {mainFields: ['main']},
         entry: {'main-server': './ClientApp/boot-server.js'},
-        plugins: [],
+        plugins: [
+            new MiniCssExtractPlugin({
+                sourceMap: true,
+                filename: 'css/[name].css',
+            }),
+            new webpack.SourceMapDevToolPlugin({
+                filename: '[file].map', // Remove this line if you prefer inline source maps.
+                moduleFilenameTemplate: path.relative(clientBundleOutputDir, '[resourcePath]') // Point sourcemap entries to the original file locations on disk
+            })
+        ],
         output: {
             libraryTarget: 'commonjs',
-            path: path.join(__dirname, './ClientApp/dist')
+            path: path.join(__dirname, './ClientApp/dist'),
+            filename: 'js/[name].js'
         },
         target: 'node'
     });
