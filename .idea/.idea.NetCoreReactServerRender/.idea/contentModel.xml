@@ -5,7 +5,6 @@
     <e p="C:\Users\can.acar\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_NetCoreReactServerRender.2111094996.00" t="ExcludeRecursive" />
     <e p="D:\Projects\NetCoreReactServerRender" t="IncludeFlat">
       <e p="NetCoreReactServerRender" t="IncludeRecursive">
-        <e p=".babelrc" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />

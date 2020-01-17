@@ -94,11 +94,14 @@ module.exports = (env) => {
                     {
                         test: /\.jsx?$/,
                         include: /ClientApp/,
-                        use: [
-                            {
-                                loader: 'babel-loader'
+                        use: {
+                            loader: 'babel-loader',
+                            options: {
+                                plugins: ["react-hot-loader/babel"],
+                                presets: ["@babel/preset-env", "@babel/preset-react"]
                             }
-                        ]
+                        }
+
                     },
                     {
                         test: /\.(gif|png|jpe?g|svg)$/i,
